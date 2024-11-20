@@ -1,0 +1,338 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    color: #333;
+}
+hr{
+    margin: 0;
+    padding: 0;
+}
+header {
+    background:  #5f2a5f;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-menu {
+    font-family: 'Roboto';
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-links a {
+    background-position: center;
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    padding: 3px;
+    background-image:  linear-gradient(to right, #ffff, rgb(255, 0, 255)); /* Параметры градиента */
+    background-repeat: no-repeat; /* Фон не повторяется */
+    background-size: 0px 0px; /* Линия будет шириной 10px и высотой 2px */
+    background-position: left bottom; /* Положение в левом нижнем углу */
+    padding-bottom: 2px; /* Расстояние от текста до линии */
+    text-decoration: none; /* Убираем подчёркивание */
+    transition: 0.5s; 
+}
+.nav-links a:hover{
+    background-size: 100% 2px;
+}
+.Logo img{
+    width: 200px;
+    height: 50px;
+}
+
+
+
+
+
+
+
+
+/*МЕЙН ЧАСТЬ*/
+.content-1{
+    padding-left: 20px;
+    padding-bottom: 30px;
+    justify-content: left;
+    font-family: 'Montserrat';
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+.text1 h1{
+    color: #003430;
+}
+.textCont{
+    border-radius: 20px;
+    border-image: linear-gradient(to right, #ff00e6 0%, #0040ff 100%) 1;
+    border-width: 2px;
+    border-style:solid;
+    display: inline-block;
+    padding: 0px 15px;
+}
+.button4exams{
+    margin: 30px 0 0 180px;
+
+}
+.button4exams a{
+    font-size: 25px;
+    border-image: linear-gradient(to right, #00ffd0 0%, #0040ff 100%) 1;
+    color:#ff00e6;
+}
+.button4exams a:hover{
+    border-radius: 0;
+    transition: 0.7s;
+    background-color: #00ffa6;
+    color: white;
+}
+.button{
+    padding: 15px 20px;
+    border-radius: 20px;
+    border-width: 2px;
+    border-style:solid; 
+    font-family: 'Benzin';
+    text-decoration: none;
+}
+.button a{
+    font-size: 30px;
+}
+
+
+
+
+
+
+
+
+.content-2{
+    justify-content: space-around;
+    margin-bottom: 30px;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    margin-right: 20px;
+    width: 1413px;
+    display:flex;
+    padding: 50px;
+    background-color: #5f2a5f;
+}
+.firstCont{
+    position: relative;
+    border-radius: 20px;
+    border-image: linear-gradient(to right, #ffffff 0%, #00ff62 100%) 1;
+    border-width: 2px;
+    border-style:solid;
+    padding: 20px;
+    display: inline-block;
+}
+.firstCont h1{
+    color: #ff0048;
+    text-align: center;
+}
+.firstCont p{
+    color: white;
+    text-align: left;
+}
+.secCont{
+    position: relative;
+    border-radius: 20px;
+    border-image: linear-gradient(to right, #00ff62 0%, #ffffff 30%, #ffffff 70%, #00ff62 100%) 1;
+    border-width: 2px;
+    border-style:solid;
+    padding: 20px;
+    display: inline-block;
+}
+.secCont h1{
+    color: rgb(0, 217, 255);
+    text-align: center;
+}
+.secCont p{
+    color:white;
+    text-align: left;
+}
+.thirdCont{
+    position: relative;
+    border-radius: 20px;
+    border-image: linear-gradient(to right, #00ff62 0%, #ffffff 100%) 1;
+    border-width: 2px;
+    border-style:solid;
+    padding: 20px;
+    display: inline-block;
+}
+.thirdCont h1{
+    color: #00ffa6; 
+    text-align: center;
+}
+.thirdCont p{
+    color: white;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*НИЖНАЯ ЧАСТЬ*/
+footer {
+    justify-content: space-between;
+    font-family: 'Benzin';
+    background: #5f2a5f;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+
+}
+footer p{
+    color:#ffff;
+}
+.number{
+    text-align: left;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+}
+.adr p{
+    color:rgb(149, 149, 149);
+}
+.adr p{
+    margin-left: 40px;
+    margin-bottom: 2px;
+}
+.adr ul{
+    margin-top: -3px;
+}
+.adr li{
+    text-decoration: none;
+    color: rgb(149, 149, 149) ;
+
+}
+.adr a{
+    text-decoration: none;
+    color:rgb(149, 149, 149);
+}
+.adress{
+    text-align: left;
+    text-decoration: none;
+    position:relative;
+    display: inline-block;
+}
+.socialMedia{
+    text-align: left;
+    text-decoration: none;
+    position:relative;
+    display: inline-block;
+}
+
+
+
+/*АНИМАЦИИ*/
+
+.text1{
+    transform: translate(100%,0);
+    transition: 0.3s;
+    opacity: 0;
+}
+.text1.visible{
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.textCont{
+    transform: translateX(-100%);
+    transition: 0.3s;
+    opacity: 0;
+}
+.textCont.visible{
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.button4exams{
+    transform: translateY(100%);
+    transition: 0.3s;
+    opacity: 0;
+}
+.button4exams.visible{
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.firstCont, .secCont, .thirdCont{
+    transform: translateY(100%);
+    transition: 0.3s;
+    opacity: 0;
+}
+.firstCont.visible, .secCont.visible, .thirdCont.visible{
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.adress{
+    transform: translateX(100%);
+    transition: 0.3s;
+    opacity: 0;
+}
+.socialMedia{
+    transform: translateX(-100%);
+    transition: 0.3s;
+    opacity: 0;
+}
+.number{
+    transform: translateY(100%);
+    transition: 0.3s;
+    opacity: 0;
+}
+.footh1{
+    transform: translateY(-100%);
+    transition: 0.3s;
+    opacity: 0
+}
+
+.number.visible, .adress.visible, .socialMedia.visible, .footh1.visible{
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+
+
+
+/*ШРИФТЫ*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+    font-family: 'Benzin';
+    src: local('Benzin Regular'), local('Benzin-Regular'),
+        url('Benzin-Regular.woff2') format('woff2'),
+        url('Benzin-Regular.woff') format('woff'),
+        url('Benzin-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Benzin';
+    src: local('Benzin Bold'), local('Benzin-Bold'),
+        url('Benzin-Bold.woff2') format('woff2'),
+        url('Benzin-Bold.woff') format('woff'),
+        url('Benzin-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
