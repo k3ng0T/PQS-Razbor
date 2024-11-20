@@ -1,4 +1,7 @@
 /* styles.css */
+main{
+    background-color: white;
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -10,21 +13,115 @@ hr{
     margin: 0;
     padding: 0;
 }
+/* Хедер */
 header {
-    background:  #5f2a5f;
+    position: relative;
+    width: 100%;
+    background-color: #5f2a5f; /* Фон для верхнего блока */
+}
+
+/* Верхнее меню */
+/* Скрытое состояние */
+.top-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #5f2a5f;
     color: white;
-    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 20px;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
 }
 
-.top-menu {
-    font-family: 'Roboto';
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+/* Показ */
+.top-menu.visible {
+    transform: translateY(0);
 }
+
+/* Эффект при наведении */
+.top-menu:hover {
+    transform: translateY(0) !important;
+}
+
+
+/* Логотип */
+.Logo img {
+    width: 150px;
+    height: auto;
+}
+
+/* Фото в хедере */
+.Headr_photo {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    z-index: 1; /* Фото ниже других элементов */
+}
+
+.Headr_photo .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный слой */
+    z-index: 1;
+}
+.Headr_photo img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+.cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
+
+.cta h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-family: 'Benzin', sans-serif;
+    font-size: 18px;
+    margin-bottom: 30px;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.cta-button {
+    font-family: 'Benzin';
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #ff0066;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #cc0052;
+}
+
+
+
+
 
 .nav-links a {
     background-position: center;
@@ -40,9 +137,7 @@ header {
     text-decoration: none; /* Убираем подчёркивание */
     transition: 0.5s; 
 }
-.nav-links a:hover{
-    background-size: 100% 2px;
-}
+
 .Logo img{
     width: 200px;
     height: 50px;
@@ -52,11 +147,9 @@ header {
 
 
 
-
-
-
 /*МЕЙН ЧАСТЬ*/
 .content-1{
+    margin-left: 45px;
     padding-left: 20px;
     padding-bottom: 30px;
     justify-content: left;
@@ -65,48 +158,43 @@ header {
     font-weight: 300;
     font-style: normal;
 }
-.text1 h1{
+.cb1_title{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    margin-left:15px;
     color: #003430;
 }
-.textCont{
+.cb1_text{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px; margin: 20px 0;
+    color: white    ;
+    background-color: #5f2a5f;
     border-radius: 20px;
-    border-image: linear-gradient(to right, #ff00e6 0%, #0040ff 100%) 1;
     border-width: 2px;
     border-style:solid;
     display: inline-block;
     padding: 0px 15px;
 }
 .button4exams{
-    margin: 30px 0 0 180px;
+    margin: 30px 0 0 100px;
 
 }
 .button4exams a{
-    font-size: 25px;
-    border-image: linear-gradient(to right, #00ffd0 0%, #0040ff 100%) 1;
-    color:#ff00e6;
-}
-.button4exams a:hover{
-    border-radius: 0;
-    transition: 0.7s;
-    background-color: #00ffa6;
-    color: white;
-}
-.button{
-    padding: 15px 20px;
-    border-radius: 20px;
-    border-width: 2px;
-    border-style:solid; 
+    padding: 15px 20px; 
     font-family: 'Benzin';
     text-decoration: none;
+    font-size: 25px;
+    border-radius: 20px;
+    border-width: 2px;
+    border-style:solid;
+    color: #5f2a5f;
 }
-.button a{
-    font-size: 30px;
+
+.cb1_2{
+    display: inline-block;
+    position: relative;
+    justify-content: space-around;
 }
-
-
-
-
-
 
 
 
@@ -123,71 +211,367 @@ header {
     padding: 50px;
     background-color: #5f2a5f;
 }
-.firstCont{
+.cb2_1{
     position: relative;
-    border-radius: 20px;
-    border-image: linear-gradient(to right, #ffffff 0%, #00ff62 100%) 1;
+    background-color: white;
+    border-radius: 15%;
     border-width: 2px;
     border-style:solid;
     padding: 20px;
     display: inline-block;
 }
-.firstCont h1{
-    color: #ff0048;
+.cb2_1 h1{
+    color: #5f2a5f;
     text-align: center;
 }
-.firstCont p{
-    color: white;
+.cb2_1 p{
+    color: black;
     text-align: left;
 }
-.secCont{
+.cb2_2{
+    background-color: white;
     position: relative;
-    border-radius: 20px;
-    border-image: linear-gradient(to right, #00ff62 0%, #ffffff 30%, #ffffff 70%, #00ff62 100%) 1;
+    border-radius: 15%;
     border-width: 2px;
     border-style:solid;
     padding: 20px;
     display: inline-block;
 }
-.secCont h1{
-    color: rgb(0, 217, 255);
+.cb2_2 h1{
+    color: #5f2a5f;
     text-align: center;
 }
-.secCont p{
+.cb2_2 p{
+    color:rgb(0, 0, 0);
+    text-align: left;
+}
+.cb2_3{
+    background-color: white;
+    position: relative;
+    border-radius: 15%;
+    border-width: 2px;
+    border-style:solid;
+    padding: 20px;
+    display: inline-block;
+}
+.cb2_3 h1{
+    color: #5f2a5f; 
+    text-align: center;
+}
+.cb2_3 p{
+    color: rgb(0, 0, 0);
+    text-align: left;
+}
+
+
+
+.content-3{
+    text-align: left;
+    padding-left: 20px;
+    padding-bottom: 30px;
+    justify-content: left;
+    font-family: 'Montserrat';
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+.cb3_1{
+    display: inline-block;
+    position: relative;
+    justify-content: space-around;
+}
+.cb3_2{
+    margin-left: 900px;
+}
+.cb3_title{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    text-align: left;
+    margin-left: 50px;
+}
+.cb3_text{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px; margin: 20px 0;
+    margin-bottom: 40px;
+    border-radius: 20px;
+    background-color: #5f2a5f;
+    color: white;
+    border-width: 2px;
+    border-style:solid;
+    display: inline-block;
+    padding: 10px 20px;
+}
+.btn2 a{
+    margin-left: 50px;
+    padding: 15px 20px; 
+    font-family: 'Benzin';
+    text-decoration: none;
+    font-size: 25px;
+    border-radius: 20px;
+    border-width: 2px;
+    border-style:solid;
+    color: #5f2a5f;
+}
+
+
+
+/*index.html*/
+.man9sua .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный слой */
+    z-index: 1;
+    transform: translateY(230%);
+}
+.man9sua_content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-110%, 730%);
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
+.TgLogo{
+    transform: translate(60%, -70%);
+    width: 700px;
+    height: 438px;
+    z-index: 2;
+    position: absolute;
+}
+.man9sua_title{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+.man9sua_text{
+    font-family: 'Benzin', sans-serif;
+    font-size: 21px;
+    margin-bottom: 30px;
+    max-width: 600px;
+    line-height: 1.6;
+}
+.tgpks{
+    font-family: 'Benzin';
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #ff0066;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+
+.mcb1_11gr{ margin-top: 10px;
+    margin-bottom: 40px;
+    justify-content: space-around;
+}
+.mcb1_12023{
+    left: 8%;
+    margin-right: 50px;
+    display: inline-block;
+    position: relative;
+    margin-left: 0px;
+    padding: 15px 20px; 
+    font-family: 'Benzin';
+    text-decoration: none;
+    font-size: 25px;
+    background-color: #5f2a5f;
+    border-radius: 15%;
+    border-width: 2px;
+    color:#ffffff;
+}
+.mcb1_12023 a{
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+}
+
+.mcb1_22023{
+    left: 8%;
+    margin-right: 50px;
+    display: inline-block;
+    position: relative;
+    margin-left: 0px;
+    padding: 15px 20px; 
+    font-family: 'Benzin';
+    text-decoration: none;
+    font-size: 25px;
+    background-color: #5f2a5f;
+    border-radius: 15%;
+    border-width: 2px;
     color:white;
-    text-align: left;
 }
-.thirdCont{
-    position: relative;
-    border-radius: 20px;
-    border-image: linear-gradient(to right, #00ff62 0%, #ffffff 100%) 1;
-    border-width: 2px;
-    border-style:solid;
-    padding: 20px;
+.mcb1_22023 a{
+    text-decoration: none;
+    color:white;
+}
+
+.mcb1_32023{
+    left: 8%;
+    margin-right: 50px;
     display: inline-block;
+    position: relative;
+    margin-left: 0px;
+    padding: 15px 20px; 
+    font-family: 'Benzin';
+    text-decoration: none;
+    font-size: 25px;
+    background-color: #5f2a5f;
+    border-radius: 15%;
+    border-width: 2px;
+    color:white;
 }
-.thirdCont h1{
-    color: #00ffa6; 
+.mcb1_32023 a{
+    text-decoration: none;
+    color:white;
+}
+
+.mcb1_42023{
+    left: 8%;
+    margin-right: 50px;
+    display: inline-block;
+    position: relative;
+    margin-left: 0px;
+    padding: 15px 20px; 
+    font-family: 'Benzin';
+    text-decoration: none;
+    font-size: 25px;
+    background-color: #5f2a5f;
+    border-radius: 15%;
+    border-width: 2px;
+    color:white;
+}
+.mcb1_42023 a{
+    text-decoration: none;
+    color:white;
+}
+
+.mcb2_10gr{ margin-top: 10px;
+    margin-bottom: 40px;
+    justify-content: space-around;
+}
+
+.mcb2_12023{
+    left: 8%;
+    margin-right: 50px;
+    display: inline-block;
+    position: relative;
+    margin-left: 0px;
+    padding: 15px 20px; 
+    font-family: 'Benzin';
+    text-decoration: none;
+    font-size: 25px;
+    background-color: #ffffff;
+    border-radius: 15%;
+    border-width: 2px;
+    color:#000000;
+}
+.mcb2_12023 a{
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+}
+
+.mcb2_22023{
+    left: 8%;
+    margin-right: 50px;
+    display: inline-block;
+    position: relative;
+    margin-left: 0px;
+    padding: 15px 20px; 
+    font-family: 'Benzin';
+    text-decoration: none;
+    font-size: 25px;
+    background-color: white;
+    border-radius: 15%;
+    border-width: 2px;
+    color:rgb(0, 0, 0);
+}
+.mcb2_22023 a{
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+}
+
+.mcb2_32023{
+    left: 8%;
+    margin-right: 50px;
+    display: inline-block;
+    position: relative;
+    margin-left: 0px;
+    padding: 15px 20px; 
+    font-family: 'Benzin';
+    text-decoration: none;
+    font-size: 25px;
+    background-color: white;
+    border-radius: 15%;
+    border-width: 2px;
+    color:rgb(0, 0, 0);
+}
+.mcb2_32023 a{
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+}
+
+.mcb2_42023{
+    left: 8%;
+    margin-right: 50px;
+    display: inline-block;
+    position: relative;
+    margin-left: 0px;
+    padding: 15px 20px; 
+    font-family: 'Benzin';
+    text-decoration: none;
+    font-size: 25px;
+    background-color: #ffffff;
+    border-radius: 15%;
+    border-width: 2px;
+    color:rgb(0, 0, 0);
+}
+.mcb2_42023 a{
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+}
+
+
+
+.ex_10gr{
+    display: inline-block;
+    position: relative;
+    justify-content: space-between;
+    color: black;
+}
+.ex24-25_10{
+    text-decoration: none;
+}
+.ex24-25_10 h1{
+    font-family: 'Roboto';
+    font-size: 20px;
+}
+.ex24-25_10 a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.ex24-25_10 h2{
+    font-family: 'Benzin';
+    margin-left: 10px;
+    color: #000000;
+}
+.ex24-10{
+    justify-content: space-between;
+    display: inline-block;
+    font-family: 'Monserrat';
     text-align: center;
+    margin-left: 50px;
+    padding: 7px;
+    background-color: #5f2a5f;
+    border-color: black;
+    border-radius: 5px;
+    border-width: 2px;
 }
-.thirdCont p{
-    color: white;
-    text-align: left;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*НИЖНАЯ ЧАСТЬ*/
@@ -241,79 +625,6 @@ footer p{
     display: inline-block;
 }
 
-
-
-/*АНИМАЦИИ*/
-
-.text1{
-    transform: translate(100%,0);
-    transition: 0.3s;
-    opacity: 0;
-}
-.text1.visible{
-    opacity: 1;
-    transform: translate(0, 0);
-}
-
-.textCont{
-    transform: translateX(-100%);
-    transition: 0.3s;
-    opacity: 0;
-}
-.textCont.visible{
-    opacity: 1;
-    transform: translate(0, 0);
-}
-
-.button4exams{
-    transform: translateY(100%);
-    transition: 0.3s;
-    opacity: 0;
-}
-.button4exams.visible{
-    opacity: 1;
-    transform: translate(0, 0);
-}
-
-.firstCont, .secCont, .thirdCont{
-    transform: translateY(100%);
-    transition: 0.3s;
-    opacity: 0;
-}
-.firstCont.visible, .secCont.visible, .thirdCont.visible{
-    opacity: 1;
-    transform: translate(0, 0);
-}
-
-.adress{
-    transform: translateX(100%);
-    transition: 0.3s;
-    opacity: 0;
-}
-.socialMedia{
-    transform: translateX(-100%);
-    transition: 0.3s;
-    opacity: 0;
-}
-.number{
-    transform: translateY(100%);
-    transition: 0.3s;
-    opacity: 0;
-}
-.footh1{
-    transform: translateY(-100%);
-    transition: 0.3s;
-    opacity: 0
-}
-
-.number.visible, .adress.visible, .socialMedia.visible, .footh1.visible{
-    opacity: 1;
-    transform: translate(0, 0);
-}
-
-
-
-
 /*ШРИФТЫ*/
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
@@ -336,3 +647,34 @@ footer p{
     font-weight: 700;
     font-style: normal;
   }
+
+
+.cb2_title{
+    color: #5f2a5f;
+    font-family: 'Montserrat';
+}
+.cb2_text{
+    font-family: 'Roboto';
+}
+.btn2{
+    font-family: 'Benzin';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

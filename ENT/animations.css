@@ -1,0 +1,158 @@
+.cb1_title{
+    transform: translate(100%,0);
+    transition: 0.3s;
+    opacity: 0;
+}
+.cb1_text{
+    transform: translateX(-100%);
+    transition: 0.3s;
+    opacity: 0;
+}
+.button4exams{
+    transform: translateY(100%);
+    transition: 0.3s;
+    opacity: 0;
+}
+.cb2_1, .cb2_2, .cb2_3{
+    transform: translateY(100%);
+    transition: 0.3s;
+    opacity: 0;
+}
+.adress{
+    transform: translateX(100%);
+    transition: 0.3s;
+    opacity: 0;
+}
+.socialMedia{
+    transform: translateX(-100%);
+    transition: 0.3s;
+    opacity: 0;
+}
+.number{
+    transform: translateY(100%);
+    transition: 0.3s;
+    opacity: 0;
+}
+.footh1{
+    transform: translateY(-100%);
+    transition: 0.3s;
+    opacity: 0
+}
+.cb3_title{
+    transform: translateY(-100%);
+    transition: 0.3s;
+    opacity: 0
+}
+.cb3_text{
+    transform: translateX(-100%);
+    transition: 0.3s;
+    opacity: 0
+}
+.btn2{
+    transform: translateX(100%);
+    transition: 0.3s;
+    opacity: 0
+}
+.number.visible, .adress.visible, .socialMedia.visible, .footh1.visible, .cb2_2.visible, .cb2_3.visible, .btn2.visible{
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.cb1_title.visible, .cb1_text.visible, .button4exams.visible, .cb3_title.visible, .cb2_1.visible, .cb3_text.visible{
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.mcb1_12023{
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: 0.3s;
+}
+.mcb1_22023{
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: 0.3s;
+}
+.mcb1_32023{
+    opacity: 0;
+    transform: translateX(100%);
+    transition: 0.5s;
+}
+.mcb1_42023{
+    transform: translateX(100%);
+    opacity: 0;
+    transition: 0.5s;
+}
+.mcb1_12023.visible, .mcb1_22023.visible, .mcb1_32023.visible, .mcb1_42023.visible{
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.mcb2_12023{
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: 0.3s;
+}
+.mcb2_22023{
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: 0.3s;
+}
+.mcb2_32023{
+    opacity: 0;
+    transform: translateX(100%);
+    transition: 0.5s;
+}
+.mcb2_42023{
+    transform: translateX(100%);
+    opacity: 0;
+    transition: 0.5s;
+}
+.mcb2_12023.visible, .mcb2_22023.visible, .mcb2_32023.visible, .mcb2_42023.visible{
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+
+
+.Shadsw {
+    position: relative;
+    perspective: 1000px; /* Перспектива для 3D-эффекта */
+    transform-style: preserve-3d; /* Сохраняет 3D-трансформации */
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* Плавные эффекты */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Базовая тень */
+}
+
+.Shadsw:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Сильная тень при наведении */
+}
+
+.tgpks:hover{
+    border-radius: 20px;
+    transition: 0.7s;
+    background-color: #ffffff;
+    color: #5f2a5f;
+}
+
+.button4exams a:hover{
+    border-radius: 20px;
+    border-image: none;
+    transition: 0.7s;
+    background-color: #5f2a5f;
+    color: white;
+}
+.btn2 a:hover{
+    border-radius: 20px;
+    border-image: none;
+    transition: 0.7s;
+    background-color: #5f2a5f;
+    color: white;
+}
+
+
+
+
+
+.nav-links a:hover{
+    background-size: 100% 2px;
+}
+
+
